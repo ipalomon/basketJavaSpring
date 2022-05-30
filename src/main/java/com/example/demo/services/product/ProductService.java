@@ -27,4 +27,12 @@ public class ProductService {
     public Optional<Product> findProductById(Long productId){
         return productRepository.findById(productId);
     }
+
+    public void delete(Long productId){
+        productRepository.deleteById(productId);
+    }
+
+    public Product update (Product book){
+        return productRepository.save(book);
+    }
 }

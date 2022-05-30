@@ -27,8 +27,8 @@ public class ApplicationCommandRunner implements CommandLineRunner {
 
         logger.info("executing ...");
 
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Reading hello Spring Boot Command Line Runner: " + reader.nextLine());
+       // Scanner reader = new Scanner(System.in);
+       // System.out.println("Reading hello Spring Boot Command Line Runner: " + reader.nextLine());
         //it works
 
 
@@ -37,14 +37,14 @@ public class ApplicationCommandRunner implements CommandLineRunner {
 
     private void createProducts(){
         // String title, String author, int pages, int year, String iSBN
-        Product product = new Product(1,"Coches");
-        Product product1 = new Product(2,"Motos");
-        Product product2 = new Product(3,"Camiones");
-        Product product3 = new Product(4,"Autobuses");
+  /*      Product product = new Product(1L,"Coches");
+        Product product1 = new Product(2L,"Motos");
+        Product product2 = new Product(3L,"Camiones");
+        Product product3 = new Product(4L,"Autobuses");
 
         productService.create(product);
         productService.create(product1);
         productService.create(product2);
-        productService.create(product3);
+        productService.create(product3);*/
     }
 }
