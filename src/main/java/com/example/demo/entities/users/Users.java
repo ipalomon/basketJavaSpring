@@ -30,13 +30,12 @@ public class Users {
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Basket basket;
 
-    public Users(String name, String surname, String lastname, String phone, String mail, String passwd, Basket basket) {
+    public Users(String name, String surname, String lastname, String phone, String mail, String passwd) {
         this.name = name;
         this.surname = surname;
         this.lastname = lastname;
         this.phone = phone;
         this.mail = mail;
         this.passwd = passwd;
-        this.basket = basket;
     }
 }
