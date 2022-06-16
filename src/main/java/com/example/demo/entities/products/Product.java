@@ -8,7 +8,11 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity(name="Product")
 @Table(name = "PRODUCT")
 
@@ -25,7 +29,7 @@ public class Product {
     private double price;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "TAX_FK", nullable = false)
+    @JoinColumn(name = "TAX_FK")
     private Tax tax;
 
 

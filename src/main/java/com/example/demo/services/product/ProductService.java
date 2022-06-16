@@ -32,7 +32,7 @@ public class ProductService {
         productRepository.deleteById(productId);
     }
 
-    public Product update (Product book){
-        return productRepository.save(book);
+    public Product update (Product product){
+        return productRepository.save(product);
     }
 }
