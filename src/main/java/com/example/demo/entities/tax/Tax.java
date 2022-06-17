@@ -1,10 +1,7 @@
 package com.example.demo.entities.tax;
 
 import com.example.demo.entities.products.Product;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Entity(name="Tax")
 @Table(name = "TAX")
 public class Tax {
@@ -23,5 +21,10 @@ public class Tax {
 
     @OneToOne(mappedBy = "tax", cascade = CascadeType.ALL)
     private Product product;
+
+    public Tax(double type) {
+        this.type = type;
+    }
+
 
 }

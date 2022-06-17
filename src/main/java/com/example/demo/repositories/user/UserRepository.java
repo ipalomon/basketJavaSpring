@@ -1,6 +1,5 @@
 package com.example.demo.repositories.user;
 
-import com.example.demo.entities.products.Product;
 import com.example.demo.entities.users.Users;
 import org.springframework.data.repository.CrudRepository;
 

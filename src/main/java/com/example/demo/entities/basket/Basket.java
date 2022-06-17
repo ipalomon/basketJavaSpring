@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Builder
-@NoArgsConstructor
 @Getter @Setter
 @ToString
 @AllArgsConstructor
@@ -23,18 +22,16 @@ public class Basket {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="BASKET_ID")
     private long basketId;
-    @Column(name="QUANTITY")
-    private double quantity;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "USER_FK", nullable = false)
+    @JoinColumn(name = "USER_FK")
     private Users user;
 
     @ManyToMany(mappedBy = "baskets", cascade = CascadeType.ALL,
             fetch = FetchType.EAGER)
     private List<Product> products = new ArrayList<>();
 
-    public Basket(double quantity) {
-        this.quantity = quantity;
-    }
+    public Basket() {}
+
+
 }
